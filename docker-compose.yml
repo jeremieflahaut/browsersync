@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ############################
+  # Setup the Browsersync container
+  ############################
+  browsersync:
+    container_name: browsersync
+    build: .
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - ./www:/app
